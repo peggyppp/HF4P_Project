@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+<p>You submitted the following data:</p>
+<div style="width:80vw;">
+  <table  style="width:100%;">
+  <tr><td>Phrase:</td><td>{{ the_phrase }}</td></tr>
+  <tr><td>Letters:</td><td>{{ the_letters }}</td></tr>
+</table>
+</div>
+
+<p>When "{{ the_phrase }}"is search for "{{ the_letters}}", the following results are returned:"</p>
+<h3>{{ the_results }}</h3>
+<a  href="/"><button> Try Again </button></a> 
+<a  href="/viewlog"><button> View Log </button></a>
+
+{% endblock %}

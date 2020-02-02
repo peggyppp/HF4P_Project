@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2> {{ the_title }} </h2>
+<div style="width:80vw;">
+<table  style="width:100%;">
+  <tr>
+    {% for row_title in the_row_titles %}  <!--使用for迴圈，不需要以冒號結尾-->
+      <th>{{row_title}}</th>
+    {% endfor %}                           <!--需以'endfor'為結束-->
+  </tr>
+  {% for log_row in the_data %}
+    <tr>
+      {% for item in log_row %}
+        <td>{{item}}</td>
+      {% endfor %}
+    </tr>
+  {% endfor %}
+</table>
+</div>
+<br>
+<a  href="/"><button> Home </button></a> 
+
+{% endblock %}
